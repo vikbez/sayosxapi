@@ -11,7 +11,7 @@ def index(text='hello'):
 
 @app.route("/say/<voice>/<text>")
 def index(voice='Alex', text='hello'):
-    system('say -v {} {}'.format(escape(voice), escape(text))
+    system('say -v {} {}'.format(escape(voice), escape(text)))
     return 'ok'
 
 if __name__ == "__main__":
