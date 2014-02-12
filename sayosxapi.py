@@ -1,4 +1,5 @@
 from os import system
+from commands import getoutput
 from re import escape
 from flask import Flask
 import logging
@@ -12,6 +13,13 @@ def say(*args):
     logging.info('executing: {}'.format(command))
     system(command)
     return True
+
+
+@app.route("/voices")
+def list_voices():
+    command = "say -v '?'"
+    logging.info('executing: {}'.format(command))
+    return getoutput(command)
 
 
 @app.route("/say/<text>")
@@ -29,4 +37,4 @@ def say_voice_text(voice='Alex', text='hello'):
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     app.debug = True
-    app.run(debug=False, port=9000, host='0.0.0.0')
+    app.run(debug=False, port=9010, host='0.0.0.0')
