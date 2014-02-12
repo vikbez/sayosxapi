@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 
 @app.route("/<text>")
-def index(text='a'):
+def index(text='hello'):
     system('say %s' % escape(text))
     return 'ok'
 
