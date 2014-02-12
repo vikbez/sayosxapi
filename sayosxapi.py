@@ -5,12 +5,12 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route("/say/<text>")
-def index(text='hello'):
+def say_text(text='hello'):
     system('say %s' % escape(text))
     return 'ok'
 
 @app.route("/say/<voice>/<text>")
-def index(voice='Alex', text='hello'):
+def say_voice_text(voice='Alex', text='hello'):
     system('say -v {} {}'.format(escape(voice), escape(text)))
     return 'ok'
 
