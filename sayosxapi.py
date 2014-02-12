@@ -4,8 +4,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
-@app.route("/<text>")
+@app.route("/say/<text>")
 def index(text='hello'):
     system('say %s' % escape(text))
     return 'ok'
