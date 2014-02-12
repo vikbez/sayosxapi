@@ -1,7 +1,7 @@
 sayosxapi
 =========
 
-make OSX server say something from an api call like http://server:9000/shut+up
+make OSX server say something from an api call like http://server:9000/say/shut+up
 
 
 installation
