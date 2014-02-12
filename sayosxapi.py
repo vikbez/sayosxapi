@@ -10,7 +10,7 @@ app = Flask(__name__)
 def say(*args):
     command = ' '.join(['say'] + list(args))
     logging.info('executing: {}'.format(command))
-    #system(command)
+    system(command)
     return True
 
 
