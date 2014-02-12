@@ -11,4 +11,4 @@ def index(text='hello'):
     return 'ok'
 
 if __name__ == "__main__":
-    app.run(debug=False, port=9000)
+    app.run(debug=False, port=9000, host='0.0.0.0')
