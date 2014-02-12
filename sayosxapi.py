@@ -16,7 +16,7 @@ def say(*args):
 
 @app.route("/say/<text>")
 def say_text(text='hello'):
-    say(escape(text))
+    say(escape(text.replace('+', ' ')))
     return 'ok\n'
 
 
