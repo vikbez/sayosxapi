@@ -11,4 +11,4 @@ installation
 
 `python sayosxapi.py`
 
-`curl http://localhost:9000/shut+up`
+`curl http://localhost:9000/say/shut+up`
