@@ -50,4 +50,4 @@ def say_voice_text(voice='Alex', text='hello'):
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     app.debug = True
-    app.run(debug=False, port=9010, host='0.0.0.0')
+    app.run(debug=False, port=9000, host='0.0.0.0')
